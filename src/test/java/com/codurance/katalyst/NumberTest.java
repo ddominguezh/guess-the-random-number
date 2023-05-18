@@ -21,4 +21,9 @@ public class NumberTest {
     public void is_higher_that(){
         assertTrue(Number.create(5).isHigherThat(Number.create(4)));
     }
+
+    @Test
+    public void is_lower_that(){
+        assertTrue(Number.create(5).isLowerThat(Number.create(10)));
+    }
 }
