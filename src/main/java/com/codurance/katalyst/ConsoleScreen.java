@@ -26,8 +26,7 @@ public class ConsoleScreen implements Screen {
 
     @Override
     public void isHigher() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'isHigher'");
+        System.out.println(String.format("I play a %d. The number is higher", this.lastNumber));
     }
 
     @Override
