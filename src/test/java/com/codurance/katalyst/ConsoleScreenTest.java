@@ -31,6 +31,6 @@ public class ConsoleScreenTest {
     public void start(){
         ConsoleScreen screen = new ConsoleScreen();
         screen.start();
-        assertEquals("As player", this.outputStream.toByteArray());
+        assertEquals("As player\n", this.outputStream.toString());
     }
 }

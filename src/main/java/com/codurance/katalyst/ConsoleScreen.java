@@ -13,6 +13,11 @@ public class ConsoleScreen implements Screen {
     }
 
     @Override
+    public void start() {
+        System.out.println("As player");
+    }
+
+    @Override
     public void isLower() {
         // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'isLower'");
