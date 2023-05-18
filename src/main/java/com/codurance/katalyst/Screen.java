@@ -5,7 +5,7 @@ public interface Screen {
     int readNumber();
     void isLower();
     void isHigher();
-    void lower();
+    void lose();
     void won();
-    
+
 }

@@ -1,11 +1,15 @@
 package com.codurance.katalyst;
 
+import java.util.Scanner;
+
 public class ConsoleScreen implements Screen {
 
     @Override
     public int readNumber() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'readNumber'");
+        Scanner scanner = new Scanner(System.in);
+        int value = scanner.nextInt();
+        scanner.close();
+        return value;
     }
 
     @Override
@@ -21,7 +25,7 @@ public class ConsoleScreen implements Screen {
     }
 
     @Override
-    public void lower() {
+    public void lose() {
         // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'lower'");
     }
