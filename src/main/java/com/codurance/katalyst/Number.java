@@ -19,4 +19,8 @@ public class Number {
         }
         return this.value == ((Number)otherValue).value;
     }
+    public boolean isHigherThat(Number otherValue) {
+        assert(otherValue != null);
+        return this.value > otherValue.value;
+    }
 }
