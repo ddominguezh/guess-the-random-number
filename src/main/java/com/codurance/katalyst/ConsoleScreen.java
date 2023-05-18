@@ -4,12 +4,14 @@ import java.util.Scanner;
 
 public class ConsoleScreen implements Screen {
 
+    private int lastNumber;
+
     @Override
     public int readNumber() {
         Scanner scanner = new Scanner(System.in);
-        int value = scanner.nextInt();
+        this.lastNumber = scanner.nextInt();
         scanner.close();
-        return value;
+        return this.lastNumber;
     }
 
     @Override
@@ -19,8 +21,7 @@ public class ConsoleScreen implements Screen {
 
     @Override
     public void isLower() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'isLower'");
+        System.out.println(String.format("I play a %d. The number is lower", this.lastNumber));
     }
 
     @Override
