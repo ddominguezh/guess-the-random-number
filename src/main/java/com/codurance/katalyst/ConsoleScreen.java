@@ -36,8 +36,7 @@ public class ConsoleScreen implements Screen {
 
     @Override
     public void won() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'won'");
+        System.out.println("the player wins");
     }
     
 }
