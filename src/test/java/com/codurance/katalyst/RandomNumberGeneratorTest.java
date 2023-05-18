@@ -24,4 +24,16 @@ public class RandomNumberGeneratorTest {
         RandomNumberGenerator generator = new RandomNumberGenerator();
         assertTrue(generator.execute().isLowerThat(Number.create(11)));
     }
+
+    @Test
+    public void generate_number_equal_ten(){
+        RandomNumberGenerator generator = new RandomNumberGenerator();
+        boolean found = false;
+        for( int i = 0 ; i < 100 ; i++ ){
+            if(generator.execute().equals(Number.create(10))){
+                found = true;
+            }
+        }
+        assertTrue(found);
+    }
 }
