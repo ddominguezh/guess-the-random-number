@@ -18,4 +18,10 @@ public class RandomNumberGeneratorTest {
         RandomNumberGenerator generator = new RandomNumberGenerator();
         assertNotEquals(generator.execute(), generator.execute());
     }
+
+    @Test
+    public void generate_number_less_or_equal_ten(){
+        RandomNumberGenerator generator = new RandomNumberGenerator();
+        assertTrue(generator.execute().isLowerThat(Number.create(11)));
+    }
 }
