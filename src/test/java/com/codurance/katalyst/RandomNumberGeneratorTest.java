@@ -1,5 +1,6 @@
 package com.codurance.katalyst;
 
+import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
@@ -10,7 +11,13 @@ public class RandomNumberGeneratorTest {
     @Test
     public void generate_number_greater_than_zero(){
         RandomNumberGenerator generator = new RandomNumberGenerator();
-        assertTrue(generator.execute().isHigherThat(Number.create(0)));
+        boolean found = false;
+        for( int i = 0 ; i < 100 ; i++ ){
+            if(generator.execute().equals(Number.create(0))){
+                found = true;
+            }
+        }
+        assertFalse(found);
     }
 
     @Test
