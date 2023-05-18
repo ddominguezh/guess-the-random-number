@@ -12,5 +12,11 @@ public class Number {
     public int value(){
         return this.value;
     }
-    
+    @Override
+    public boolean equals(Object otherValue){
+        if(otherValue == null || !(otherValue instanceof Number)){
+            return false;
+        }
+        return this.value == ((Number)otherValue).value;
+    }
 }
