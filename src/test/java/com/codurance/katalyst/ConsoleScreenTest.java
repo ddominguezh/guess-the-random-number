@@ -26,4 +26,11 @@ public class ConsoleScreenTest {
         ConsoleScreen screen = new ConsoleScreen();
         assertEquals(5, screen.readNumber());
     }
+
+    @Test
+    public void start(){
+        ConsoleScreen screen = new ConsoleScreen();
+        screen.start();
+        assertEquals("As player", this.outputStream.toByteArray());
+    }
 }
