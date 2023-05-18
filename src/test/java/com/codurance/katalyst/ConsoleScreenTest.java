@@ -33,4 +33,11 @@ public class ConsoleScreenTest {
         screen.start();
         assertEquals("As player\n", this.outputStream.toString());
     }
+
+    @Test
+    public void lose(){
+        ConsoleScreen screen = new ConsoleScreen();
+        screen.start();
+        assertEquals("the player loses\n", this.outputStream.toString());
+    }
 }
