@@ -40,4 +40,11 @@ public class ConsoleScreenTest {
         screen.start();
         assertEquals("the player loses\n", this.outputStream.toString());
     }
+
+    @Test
+    public void won(){
+        ConsoleScreen screen = new ConsoleScreen();
+        screen.start();
+        assertEquals("the player wins\n", this.outputStream.toString());
+    }
 }
