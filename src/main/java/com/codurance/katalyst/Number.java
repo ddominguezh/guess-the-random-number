@@ -23,4 +23,8 @@ public class Number {
         assert(otherValue != null);
         return this.value > otherValue.value;
     }
+    public boolean isLowerThat(Number otherValue) {
+        assert(otherValue != null);
+        return this.value < otherValue.value;
+    }
 }
