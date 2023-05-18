@@ -47,4 +47,14 @@ public class ConsoleScreenTest {
         screen.won();
         assertEquals("the player wins\n", this.outputStream.toString());
     }
+
+    @Test
+    public void is_lower(){
+        ByteArrayInputStream inputStrem = new ByteArrayInputStream("3".getBytes());
+        System.setIn(inputStrem);
+        ConsoleScreen screen = new ConsoleScreen();
+        screen.readNumber();
+        screen.isLower();
+        assertEquals("I play a 3. The number is lower\n", this.outputStream.toString());
+    }
 }
