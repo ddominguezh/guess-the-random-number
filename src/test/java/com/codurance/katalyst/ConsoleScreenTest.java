@@ -67,4 +67,14 @@ public class ConsoleScreenTest {
         screen.isHigher();
         assertEquals("I play a 10. The number is higher\n", this.outputStream.toString());
     }
+    
+    @Test
+    public void is_equals(){
+        ByteArrayInputStream inputStrem = new ByteArrayInputStream("10".getBytes());
+        System.setIn(inputStrem);
+        ConsoleScreen screen = new ConsoleScreen();
+        screen.readNumber();
+        screen.isEquals();
+        assertEquals("I play a 10.\n", this.outputStream.toString());
+    }
 }
