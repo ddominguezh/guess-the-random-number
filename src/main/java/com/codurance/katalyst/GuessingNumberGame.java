@@ -10,7 +10,7 @@ public class GuessingNumberGame {
         this.generator = generator;
     }
     public void play() {
-        this.screen.start();
+        this.screen.show(GameStates.START);
         int step = 0;
         boolean won = false;
         Number numberToFind = this.generator.execute();
@@ -24,9 +24,9 @@ public class GuessingNumberGame {
             step++;
         }
         if(won){
-            this.screen.won();
+            this.screen.show(GameStates.WON);
         }else{
-            this.screen.lose();
+            this.screen.show(GameStates.LOSE);
         }
     }
 }

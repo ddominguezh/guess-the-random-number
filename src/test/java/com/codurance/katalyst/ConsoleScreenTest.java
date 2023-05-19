@@ -30,21 +30,21 @@ public class ConsoleScreenTest {
     @Test
     public void start(){
         ConsoleScreen screen = new ConsoleScreen();
-        screen.start();
+        screen.show(GameStates.START);
         assertEquals("As player\n", this.outputStream.toString());
     }
 
     @Test
     public void lose(){
         ConsoleScreen screen = new ConsoleScreen();
-        screen.lose();
+        screen.show(GameStates.LOSE);
         assertEquals("the player loses\n", this.outputStream.toString());
     }
 
     @Test
     public void won(){
         ConsoleScreen screen = new ConsoleScreen();
-        screen.won();
+        screen.show(GameStates.WON);
         assertEquals("the player wins\n", this.outputStream.toString());
     }
 

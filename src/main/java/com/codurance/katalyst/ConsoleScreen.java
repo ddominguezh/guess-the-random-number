@@ -15,18 +15,8 @@ public class ConsoleScreen implements Screen {
     }
 
     @Override
-    public void start() {
-        System.out.println(GameStates.START.message());
-    }
-
-    @Override
-    public void lose() {
-        System.out.println(GameStates.LOSE.message());
-    }
-
-    @Override
-    public void won() {
-        System.out.println(GameStates.WON.message());
+    public void show(GameStates state){
+        System.out.println(state.message());
     }
 
     @Override

@@ -20,10 +20,10 @@ public class GuessingNumberGameTest {
         GuessingNumberGame game = new GuessingNumberGame(screenMock, numberGeneratorMock);
         game.play();
 
-        verify(screenMock, times(1)).start();
+        verify(screenMock, times(1)).show(GameStates.START);
         verify(screenMock, times(1)).readNumber();
         verify(screenMock, times(1)).show(ComparisonResultBetweenNumbers.EQUALS);
-        verify(screenMock, times(1)).won();
+        verify(screenMock, times(1)).show(GameStates.WON);
     }
 
     @Test
@@ -37,12 +37,12 @@ public class GuessingNumberGameTest {
         GuessingNumberGame game = new GuessingNumberGame(screenMock, numberGeneratorMock);
         game.play();
 
-        verify(screenMock, times(1)).start();
+        verify(screenMock, times(1)).show(GameStates.START);
         verify(screenMock, times(3)).readNumber();
         verify(screenMock, times(1)).show(ComparisonResultBetweenNumbers.LOWER);
         verify(screenMock, times(1)).show(ComparisonResultBetweenNumbers.HIGHER);
         verify(screenMock, times(1)).show(ComparisonResultBetweenNumbers.EQUALS);
-        verify(screenMock, times(1)).won();
+        verify(screenMock, times(1)).show(GameStates.WON);
     }
 
     @Test
@@ -56,11 +56,11 @@ public class GuessingNumberGameTest {
         GuessingNumberGame game = new GuessingNumberGame(screenMock, numberGeneratorMock);
         game.play();
 
-        verify(screenMock, times(1)).start();
+        verify(screenMock, times(1)).show(GameStates.START);
         verify(screenMock, times(3)).readNumber();
         verify(screenMock, times(2)).show(ComparisonResultBetweenNumbers.LOWER);
         verify(screenMock, times(1)).show(ComparisonResultBetweenNumbers.HIGHER);
         verify(screenMock, times(0)).show(ComparisonResultBetweenNumbers.EQUALS);
-        verify(screenMock, times(1)).lose();
+        verify(screenMock, times(1)).show(GameStates.LOSE);
     }
 }
