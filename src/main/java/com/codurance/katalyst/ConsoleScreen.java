@@ -21,12 +21,12 @@ public class ConsoleScreen implements Screen {
 
     @Override
     public void isLower() {
-        System.out.println(String.format("I play a %d. The number is lower", this.lastNumber));
+        System.out.println(String.format(ComparisonResultBetweenNumbers.LOWER.message(), this.lastNumber));
     }
 
     @Override
     public void isHigher() {
-        System.out.println(String.format("I play a %d. The number is higher", this.lastNumber));
+        System.out.println(String.format(ComparisonResultBetweenNumbers.HIGHER.message(), this.lastNumber));
     }
 
     @Override
@@ -41,7 +41,7 @@ public class ConsoleScreen implements Screen {
 
     @Override
     public void isEquals() {
-        System.out.println(String.format("I play a %d.", this.lastNumber));
+        System.out.println(String.format(ComparisonResultBetweenNumbers.EQUALS.message(), this.lastNumber));
     }
     
 }
