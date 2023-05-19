@@ -22,7 +22,7 @@ public class GuessingNumberGameTest {
 
         verify(screenMock, times(1)).start();
         verify(screenMock, times(1)).readNumber();
-        verify(screenMock, times(1)).isEquals();
+        verify(screenMock, times(1)).show(ComparisonResultBetweenNumbers.EQUALS);
         verify(screenMock, times(1)).won();
     }
 
@@ -39,9 +39,9 @@ public class GuessingNumberGameTest {
 
         verify(screenMock, times(1)).start();
         verify(screenMock, times(3)).readNumber();
-        verify(screenMock, times(1)).isLower();
-        verify(screenMock, times(1)).isHigher();
-        verify(screenMock, times(1)).isEquals();
+        verify(screenMock, times(1)).show(ComparisonResultBetweenNumbers.LOWER);
+        verify(screenMock, times(1)).show(ComparisonResultBetweenNumbers.HIGHER);
+        verify(screenMock, times(1)).show(ComparisonResultBetweenNumbers.EQUALS);
         verify(screenMock, times(1)).won();
     }
 
@@ -58,9 +58,9 @@ public class GuessingNumberGameTest {
 
         verify(screenMock, times(1)).start();
         verify(screenMock, times(3)).readNumber();
-        verify(screenMock, times(2)).isLower();
-        verify(screenMock, times(1)).isHigher();
-        verify(screenMock, times(0)).isEquals();
+        verify(screenMock, times(2)).show(ComparisonResultBetweenNumbers.LOWER);
+        verify(screenMock, times(1)).show(ComparisonResultBetweenNumbers.HIGHER);
+        verify(screenMock, times(0)).show(ComparisonResultBetweenNumbers.EQUALS);
         verify(screenMock, times(1)).lose();
     }
 }

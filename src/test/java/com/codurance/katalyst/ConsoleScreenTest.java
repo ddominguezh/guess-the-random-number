@@ -54,7 +54,7 @@ public class ConsoleScreenTest {
         System.setIn(inputStrem);
         ConsoleScreen screen = new ConsoleScreen();
         screen.readNumber();
-        screen.isLower();
+        screen.show(ComparisonResultBetweenNumbers.LOWER);
         assertEquals("I play a 3. The number is lower.\n", this.outputStream.toString());
     }
 
@@ -64,7 +64,7 @@ public class ConsoleScreenTest {
         System.setIn(inputStrem);
         ConsoleScreen screen = new ConsoleScreen();
         screen.readNumber();
-        screen.isHigher();
+        screen.show(ComparisonResultBetweenNumbers.HIGHER);
         assertEquals("I play a 10. The number is higher.\n", this.outputStream.toString());
     }
     
@@ -74,7 +74,7 @@ public class ConsoleScreenTest {
         System.setIn(inputStrem);
         ConsoleScreen screen = new ConsoleScreen();
         screen.readNumber();
-        screen.isEquals();
+        screen.show(ComparisonResultBetweenNumbers.EQUALS);
         assertEquals("I play a 10.\n", this.outputStream.toString());
     }
 }

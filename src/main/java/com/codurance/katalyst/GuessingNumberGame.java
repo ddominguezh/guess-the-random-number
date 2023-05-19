@@ -17,11 +17,11 @@ public class GuessingNumberGame {
         while(step < MAX_STEPS && !won){
             Number chosenNumber = Number.create(this.screen.readNumber());
             if(numberToFind.isHigherThat(chosenNumber)){
-                this.screen.isHigher();
+                this.screen.show(ComparisonResultBetweenNumbers.HIGHER);
             }else if(numberToFind.isLowerThat(chosenNumber)){
-                this.screen.isLower();
+                this.screen.show(ComparisonResultBetweenNumbers.LOWER);
             }else{
-                this.screen.isEquals();
+                this.screen.show(ComparisonResultBetweenNumbers.EQUALS);
                 won = true;
             }
             step++;
