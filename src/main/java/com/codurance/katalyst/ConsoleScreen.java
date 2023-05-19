@@ -38,5 +38,9 @@ public class ConsoleScreen implements Screen {
     public void won() {
         System.out.println("the player wins");
     }
+
+    public void isEquals() {
+        System.out.println(String.format("I play a %d.", this.lastNumber));
+    }
     
 }
