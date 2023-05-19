@@ -19,8 +19,9 @@ public class GuessingNumberGameTest {
 
         GuessingNumberGame game = new GuessingNumberGame(screenMock, numberGeneratorMock);
         game.play();
-        
+
         verify(screenMock, times(1)).start();
+        verify(screenMock, times(1)).readNumber();
         verify(screenMock, times(1)).won();
     }
 }
