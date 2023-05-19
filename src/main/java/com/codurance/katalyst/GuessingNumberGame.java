@@ -12,21 +12,17 @@ public class GuessingNumberGame {
     public void play() {
         this.screen.show(GameStates.START);
         int step = 0;
-        boolean won = false;
         Number numberToFind = this.generator.execute();
-        while(step < MAX_STEPS && !won){
+        GameStates state = GameStates.LOSE;
+        do {
             Number chosenNumber = Number.create(this.screen.readNumber());
             ComparisonResultBetweenNumbers result = numberToFind.compareTo(chosenNumber);
             this.screen.show(result);
             if(ComparisonResultBetweenNumbers.EQUALS.equals(result)){
-                won = true;
+                state = GameStates.WON;
             }
             step++;
-        }
-        if(won){
-            this.screen.show(GameStates.WON);
-        }else{
-            this.screen.show(GameStates.LOSE);
-        }
+        } while(step < MAX_STEPS && GameStates.LOSE.equals(state));
+        this.screen.show(state);
     }
 }
