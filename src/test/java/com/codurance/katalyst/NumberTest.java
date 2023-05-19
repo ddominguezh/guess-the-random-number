@@ -15,18 +15,16 @@ public class NumberTest {
 
     @Test
     public void equals_number(){
-        assertEquals(Number.create(5), Number.create(5));
+        assertEquals(ComparisonResultBetweenNumbers.EQUALS, Number.create(5).compareTo(Number.create(5)));
     }
 
     @Test
     public void is_higher_that(){
-        assertTrue(Number.create(5).isHigherThat(Number.create(4)));
-        assertFalse(Number.create(4).isHigherThat(Number.create(5)));
+        assertEquals(ComparisonResultBetweenNumbers.HIGHER, Number.create(5).compareTo(Number.create(4)));
     }
 
     @Test
     public void is_lower_that(){
-        assertTrue(Number.create(5).isLowerThat(Number.create(10)));
-        assertFalse(Number.create(10).isLowerThat(Number.create(5)));
+        assertEquals(ComparisonResultBetweenNumbers.LOWER, Number.create(5).compareTo(Number.create(10)));
     }
 }

@@ -16,12 +16,9 @@ public class GuessingNumberGame {
         Number numberToFind = this.generator.execute();
         while(step < MAX_STEPS && !won){
             Number chosenNumber = Number.create(this.screen.readNumber());
-            if(numberToFind.isHigherThat(chosenNumber)){
-                this.screen.show(ComparisonResultBetweenNumbers.HIGHER);
-            }else if(numberToFind.isLowerThat(chosenNumber)){
-                this.screen.show(ComparisonResultBetweenNumbers.LOWER);
-            }else{
-                this.screen.show(ComparisonResultBetweenNumbers.EQUALS);
+            ComparisonResultBetweenNumbers result = numberToFind.compareTo(chosenNumber);
+            this.screen.show(result);
+            if(ComparisonResultBetweenNumbers.EQUALS.equals(result)){
                 won = true;
             }
             step++;

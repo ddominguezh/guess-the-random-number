@@ -19,12 +19,20 @@ public class Number {
         }
         return this.value == ((Number)otherValue).value;
     }
-    public boolean isHigherThat(Number otherValue) {
-        assert(otherValue != null);
+    private boolean isHigherThat(Number otherValue) {
         return this.value > otherValue.value;
     }
-    public boolean isLowerThat(Number otherValue) {
-        assert(otherValue != null);
+    private boolean isLowerThat(Number otherValue) {
         return this.value < otherValue.value;
+    }
+    public ComparisonResultBetweenNumbers compareTo(Number otherValue){
+        assert(otherValue != null);
+        if(isHigherThat(otherValue)){
+            return ComparisonResultBetweenNumbers.HIGHER;
+        }
+        if(isLowerThat(otherValue)){
+            return ComparisonResultBetweenNumbers.LOWER;
+        }
+        return ComparisonResultBetweenNumbers.EQUALS;
     }
 }
