@@ -39,6 +39,9 @@ public class GuessingNumberGameTest {
 
         verify(screenMock, times(1)).start();
         verify(screenMock, times(3)).readNumber();
+        verify(screenMock, times(1)).isLower();
+        verify(screenMock, times(1)).isHigher();
+        verify(screenMock, times(1)).isEquals();
         verify(screenMock, times(1)).won();
     }
 }
