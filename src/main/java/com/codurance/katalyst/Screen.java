@@ -8,5 +8,6 @@ public interface Screen {
     void isHigher();
     void lose();
     void won();
+    void isEquals();
 
 }
