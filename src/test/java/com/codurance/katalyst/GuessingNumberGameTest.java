@@ -29,10 +29,10 @@ public class GuessingNumberGameTest {
     @Test
     public void the_player_wins_not_on_the_first_intent(){
         Screen screenMock = mock(Screen.class);
-        when(screenMock.readNumber()).thenReturn(5);
+        when(screenMock.readNumber()).thenReturn(10, 1, 5);
 
         NumberGenerator numberGeneratorMock = mock(NumberGenerator.class);
-        when(numberGeneratorMock.execute()).thenReturn(Number.create(10), Number.create(1), Number.create(5));
+        when(numberGeneratorMock.execute()).thenReturn(Number.create(5));
 
         GuessingNumberGame game = new GuessingNumberGame(screenMock, numberGeneratorMock);
         game.play();
