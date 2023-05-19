@@ -26,6 +26,10 @@ public class GuessingNumberGame {
             }
             step++;
         }
-        this.screen.won();
+        if(won){
+            this.screen.won();
+        }else{
+            this.screen.lose();
+        }
     }
 }
