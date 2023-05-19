@@ -16,17 +16,17 @@ public class ConsoleScreen implements Screen {
 
     @Override
     public void start() {
-        System.out.println("As player");
+        System.out.println(GameStates.START.message());
     }
 
     @Override
     public void lose() {
-        System.out.println("the player loses");
+        System.out.println(GameStates.LOSE.message());
     }
 
     @Override
     public void won() {
-        System.out.println("the player wins");
+        System.out.println(GameStates.WON.message());
     }
 
     @Override
