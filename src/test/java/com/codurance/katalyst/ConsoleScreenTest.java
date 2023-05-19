@@ -55,7 +55,7 @@ public class ConsoleScreenTest {
         ConsoleScreen screen = new ConsoleScreen();
         screen.readNumber();
         screen.isLower();
-        assertEquals("I play a 3. The number is lower\n", this.outputStream.toString());
+        assertEquals("I play a 3. The number is lower.\n", this.outputStream.toString());
     }
 
     @Test
@@ -65,7 +65,7 @@ public class ConsoleScreenTest {
         ConsoleScreen screen = new ConsoleScreen();
         screen.readNumber();
         screen.isHigher();
-        assertEquals("I play a 10. The number is higher\n", this.outputStream.toString());
+        assertEquals("I play a 10. The number is higher.\n", this.outputStream.toString());
     }
     
     @Test
